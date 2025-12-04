@@ -7,13 +7,13 @@ def connect_to_db():
         conn = psycopg2.connect(
             host="localhost",
             port=5000,
-            dbname="db"
+            dbname="db",
             user="db_user",
-            password="db_passsword"
+            password="db_password"
         )
 
         print(conn)
-    except: psycopg2.Error as e:
+    except psycopg2.Error as e:
         print(f"Conexão falhou {e}")
         raise
 
