@@ -5,11 +5,16 @@ def connect_to_db():
     print("Conectando ao database do PostgreSQL...")
     try:
         conn = psycopg2.connect(
+            # host="localhost",
+            # port=5000,
+            # dbname="db",
+            # user="db_user",
+            # password="db_password"
             host="localhost",
             port=5000,
-            dbname="db",
-            user="db_user",
-            password="db_password"
+            dbname="airflow_db",
+            user="airflow",
+            password="airflow"
         )
 
         return conn
